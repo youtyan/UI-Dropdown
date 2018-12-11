@@ -1777,16 +1777,21 @@ module.exports = function(parameters) {
                       ? $option.attr('value')
                       : name
                   ;
-                  if(settings.placeholder === 'auto' && value === '') {
-                    select.placeholder = name;
-                  }
-                  else {
-                    select.values.push({
-                      name     : name,
-                      value    : value,
-                      disabled : disabled
-                    });
-                  }
+                  // if(settings.placeholder === 'auto' && value === '') {
+                  //   select.placeholder = name;
+                  // }
+                  // else {
+                  //   select.values.push({
+                  //     name     : name,
+                  //     value    : value,
+                  //     disabled : disabled
+                  //   });
+                  // }
+                  select.values.push({
+                    name     : name,
+                    value    : value,
+                    disabled : disabled
+                  });
                 })
             ;
             if(settings.placeholder && settings.placeholder !== 'auto') {
